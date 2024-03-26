@@ -1,0 +1,107 @@
+{
+  "words": [
+    {
+      "name": [
+        "PEGs (Polimerização do óxido de propileno e pela copolimerização dos óxidos de propileno e etileno)"
+      ],
+      "negativeEffect": "Disruptores hormonais"
+    },
+    {
+      "name": [
+        "Silicones",
+        "Cyclopentasiloxane",
+        "Cyclomethicone",
+        "Cyclomethicone (and) dimethicone crosspolymer",
+        "Cyclopentasiloxane (and) C30-45 alkyl Cetearyl dimethicone",
+        "Trideceth-9-amodimethicone and trideceth-21"
+      ],
+      "negativeEffect": "Formam filme impermeável nos fios, impedem absorção de água e nutrientes"
+    },
+    {
+      "name": ["Corantes sintéticos", "Conservantes sintéticos"],
+      "negativeEffect": "Alergênicos, sensibilizantes, irritantes para pele, olhos e vias respiratórias"
+    },
+    {
+      "name": ["Quaternários de amônio"],
+      "negativeEffect": "Disruptores hormonais"
+    },
+    {
+      "name": ["Dietanolamidas"],
+      "negativeEffect": "Disruptores hormonais"
+    },
+    {
+      "name": ["Derivados do petróleo"],
+      "negativeEffect": "Potenciais tóxicos e prejudiciais ao meio ambiente"
+    },
+    {
+      "name": [
+        "Ingredientes derivados de organismos geneticamente modificados (OMG)"
+      ],
+      "negativeEffect": "Impactos desconhecidos na saúde e no meio ambiente"
+    },
+    {
+      "name": ["Triclosan"],
+      "negativeEffect": "Bactericida, desregulador hormonal"
+    },
+    {
+      "name": ["DMDM Hydantoin"],
+      "negativeEffect": "Liberador de formaldeído"
+    },
+    {
+      "name": ["Parabenos", "Metylparaben"],
+      "negativeEffect": "Conservantes adicionados para prolongar a vida útil dos produtos capilares, mas podem ser prejudiciais à saúde."
+    },
+    {
+      "name": ["Sulfatos"],
+      "negativeEffect": "Surfactantes usados para limpar o couro cabeludo, mas podem ser agressivos e ressecar os fios."
+    },
+    {
+      "name": ["Polietilenoglicóis (PEG)"],
+      "negativeEffect": "Emulsificantes que podem causar irritação e alergias."
+    },
+    {
+      "name": ["Ftalatos"],
+      "negativeEffect": "Encontrados em fragrâncias, mas são suspeitos de serem disruptores endócrinos."
+    },
+    {
+      "name": ["Formaldeído"],
+      "negativeEffect": "Presente em alisamentos e tratamentos de queratina, pode ser tóxico e irritante."
+    },
+    {
+      "name": ["Dimeticona"],
+      "negativeEffect": "Um silicone usado para dar brilho, mas pode acumular-se nos fios."
+    },
+    {
+      "name": ["Palmitato de retinil"],
+      "negativeEffect": "Uma forma de vitamina A, mas pode causar irritação e sensibilidade."
+    },
+    {
+      "name": ["Óleo mineral"],
+      "negativeEffect": "Pode obstruir os poros do couro cabeludo e dificultar a respiração dos folículos capilares."
+    },
+    {
+      "name": ["Lauril éter sulfato de sódio (SLES)"],
+      "negativeEffect": "Semelhante aos sulfatos, pode ser agressivo e ressecar o cabelo."
+    },
+    {
+      "name": ["Propilenoglicol"],
+      "negativeEffect": "Encontrado em muitos produtos, mas pode causar irritação e alergias."
+    },
+    {
+      "name": ["Trietanolamina (TEA)"],
+      "negativeEffect": "Usada para ajustar o pH, mas pode ser irritante para a pele e os olhos."
+    },
+    {
+      "name": ["Fragrâncias sintéticas"],
+      "negativeEffect": "Podem conter substâncias alergênicas e irritantes."
+    },
+    {
+      "name": ["Cloreto de sódio (sal)"],
+      "negativeEffect": "Pode ressecar o cabelo e causar frizz."
+    },
+    {
+      "name": ["Ciclopentasiloxano"],
+      "negativeEffect": "Um silicone volátil que pode acumular-se nos fios."
+    }
+  ]
+}
