@@ -33,26 +33,9 @@ export class AppService {
 
   checkChemicals(params: CheckChemicalsDto): ChemicalAnalyseResultProps {
     const words = params.words.split(',');
-    const quimics = {};
+    // const quimics = {};
     const wordsArray = [];
 
-    // const searchTerm = 'ban';
-    // const data = [{ name: 'banana' }, { name: 'maçã' }, { name: 'laranja' }];
-    // const options = {
-    //   keys: ['name'],
-    //   allowTypo: true,
-    // };
-
-    // Verificação simples
-    // words.forEach((name) => {
-    //   const badQuimicIndex = badQuimicWords.words.findIndex(
-    //     (qmWord) => name === qmWord,
-    //   );
-    //   const status = badQuimicIndex > -1 ? 'bad' : 'not founded';
-
-    //   quimics[name] = status; // Store status in the object
-    //   wordsArray.push({ name, status }); // Push word and status to the array
-    // });
     console.log(words);
 
     // Verificação com fuzzysort -> testar...
