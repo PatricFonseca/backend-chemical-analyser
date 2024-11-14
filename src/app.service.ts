@@ -36,7 +36,7 @@ export class AppService {
     // const quimics = {};
     const wordsArray = [];
 
-    console.log(words);
+    console.log('words', words);
 
     // Verificação com fuzzysort -> testar...
     words.forEach((name) => {
@@ -168,38 +168,11 @@ export class AppService {
     return resultados;
     // }
   }
+
+ 
 }
 
-// const fuzzysort = require('fuzzysort');
 
-// const ingredientesProibidos = [
-//   {
-//     nome: [
-//       'PEGs (Polimerização do óxido de propileno e pela copolimerização dos óxidos de propileno e etileno)',
-//     ],
-//     pontoNegativo: 'Disruptores hormonais',
-//   },
-//   // ... restante do JSON omitido para brevidade
-// ];
-
-// function buscarIngrediente(nomeParcial) {
-//   const resultados = [];
-
-//   for (const ingrediente of ingredientesProibidos) {
-//     const nomes = ingrediente.nome;
-//     const pontoNegativo = ingrediente.pontoNegativo;
-
-//     const nomesEncontrados = fuzzysort.go(nomeParcial, nomes, { keys: ['ratio', 'item'] });
-
-//     nomesEncontrados.forEach(({ item, ratio }) => {
-//       if (ratio > 0.5) { // defina o limite de correspondência desejado
-//         resultados.push({ nome: item, pontoNegativo });
-//       }
-//     });
-//   }
-
-//   return resultados;
-// }
 
 // // Exemplos de uso
 // console.log(buscarIngrediente('parab')); // Retorna informações sobre os parabenos

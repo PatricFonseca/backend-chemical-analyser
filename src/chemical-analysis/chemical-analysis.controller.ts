@@ -1,4 +1,5 @@
 import {
+  Body,
   Controller,
   Post,
   UploadedFile,
@@ -7,6 +8,7 @@ import {
 import { FileInterceptor } from '@nestjs/platform-express';
 import * as fs from 'fs';
 import { ChemicalAnalysisService } from './chemical-analysis.service';
+import { CheckChemicalsDto } from 'src/dto/checkChemicalsDto';
 
 @Controller('chemical-analysis')
 export class ChemicalAnalysisController {
@@ -27,6 +29,14 @@ export class ChemicalAnalysisController {
 
     // Após a análise, você pode remover a imagem temporária
     fs.unlinkSync(imagePath);
+
+    return result;
+  }
+
+  @Post('check-composition')
+  async checkComposition(@Body() composition: CheckChemicalsDto) {
+    console.log(composition)
+    const result = await this.chemicalAnalysisService.checkIngredientsWithAI(composition);
 
     return result;
   }
