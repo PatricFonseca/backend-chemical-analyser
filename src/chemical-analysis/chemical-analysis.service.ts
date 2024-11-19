@@ -37,17 +37,20 @@ export class ChemicalAnalysisService {
     //   fieldsResult +
     //   '"';
       
-    const fieldsResult = '"product": "Nome do produto", "composition": "Composição química em português"';
+    const fieldsResult = '"product": "Nome do produto", "composition": "Composição química em português(String separada por virgula apenas com nomes)"';
 
     // ${fieldsResult}
     const prompt = `Analise a composição química da imagem abaixo, **focando em ingredientes como água, álcoois, óleos, extratos, conservantes e fragrâncias**. Retorne TODA a composição química em formato JSON, **em português brasileiro** e **listando todos os ingredientes individuais**, seguindo o formato:
     ${fieldsResult}
     Consulte a base de dados INCI para obter informações mais precisas sobre os ingredientes. Não precisa focar só na imagem, caso vc identifique o produto, procure na internet para concluir os ingredientes
-    faça no formato ${fieldsResult}`
+    faça no formato ${fieldsResult}
+    Obs: Retorne exclusivamente o JSON, sem nenhuma informação adicional`
+
+    console.log('promp', prompt);
 
     const imageParts = [this.fileToGenerativePart(imagePath, 'image/jpeg')];
 
-    console.log(imageParts);
+    // console.log(imageParts);
 
     const result = await model.generateContent([prompt, ...imageParts]);
     const response = result.response;
@@ -55,6 +58,8 @@ export class ChemicalAnalysisService {
 
     text = text.replace('```json', '');
     text = text.replace('```', '');
+
+    console.log(text)
 
     return JSON.parse(JSON.stringify(text));
   }
@@ -73,18 +78,18 @@ export class ChemicalAnalysisService {
     //   O formato de retorno, deve ser um json
     // `
 
-    const prompt = `Analise a lista de componentes químicos: ${composition.words}. Identifique todos os componentes que são **potencialmente tóxicos, alérgenos ou cancerígenos** para a saúde humana. Retorne os resultados em formato JSON, seguindo a estrutura abaixo:",
+    const prompt = `Analise a lista de componentes químicos: ${composition.words}. Identifique todos os componentes que são **potencialmente tóxicos, alérgenos ou cancerígenos** para a saúde humana. Retorne os resultados em formato JSON, seguindo a estrutura abaixo:",]
   "response_format": {
     "type": "json",
     "structure": [
       {
         "name": "Nome do componente",
-        "status": "Tóxico/Alérgeno/Cancerígeno/Seguro/Indeterminado",
-        "matchedText": "Texto original da lista que correspondeu ao componente",
-        
+        "risk": "Risco classificado como(low, medium, high)",
+        "description": "Descrição do componente",
       }
     ]`;
-    
+    // Tóxico/Alérgeno/Cancerígeno/Seguro/Indeterminado
+
 // "adicionais": {
   // "sinônimos": ["Lista de sinônimos do componente"],
   // "fontes": ["Links para as fontes de informação sobre a toxicidade"],
@@ -110,6 +115,8 @@ export class ChemicalAnalysisService {
 
     text = text.replace('```json', '');
     text = text.replace('```', '');
+
+    console.log(text);
 
     let indiceDoFechamento = text.indexOf("]");
 

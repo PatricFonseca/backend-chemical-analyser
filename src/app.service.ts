@@ -57,7 +57,7 @@ export class AppService {
     });
 
     // Return a JSON object with the array of words and their statuses
-    return JSON.parse(JSON.stringify({ words: wordsArray })); //as { words: wordsArray };
+    return JSON.parse(JSON.stringify({ words: wordsArray }));
 
     // return quimics;
   }

@@ -1,10 +1,4 @@
-import {
-  Body,
-  Controller,
-  Post,
-  UploadedFile,
-  UseInterceptors,
-} from '@nestjs/common';
+import { Body, Controller, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import * as fs from 'fs';
 import { ChemicalAnalysisService } from './chemical-analysis.service';
@@ -36,8 +30,6 @@ export class ChemicalAnalysisController {
   @Post('check-composition')
   async checkComposition(@Body() composition: CheckChemicalsDto) {
     console.log(composition)
-    const result = await this.chemicalAnalysisService.checkIngredientsWithAI(composition);
-
-    return result;
+    return await this.chemicalAnalysisService.checkIngredientsWithAI(composition);
   }
 }
